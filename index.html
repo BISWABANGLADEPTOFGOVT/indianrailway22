@@ -1,0 +1,521 @@
+<!--[if lt IE 9]><script src="https://cdn02.jotfor.ms/js/vendor/flashcanvas.js?3.3.41936" type="text/javascript"></script><![endif]-->
+<script src="https://cdn03.jotfor.ms/js/vendor/jquery-1.8.0.min.js?v=3.3.41936" type="text/javascript"></script>
+<script src="https://cdn01.jotfor.ms/js/vendor/jSignature.min.noconflict.js?3.3.41936" type="text/javascript"></script>
+<script src="https://cdn02.jotfor.ms/js/vendor/jotform.signaturepad.js?3.3.41936" type="text/javascript"></script>
+<script src="https://cdn03.jotfor.ms/static/prototype.forms.js?3.3.41936" type="text/javascript"></script>
+<script src="https://cdn01.jotfor.ms/static/jotform.forms.js?3.3.41936" type="text/javascript"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/punycode/1.4.1/punycode.js"></script>
+<script defer src="https://cdn02.jotfor.ms/js/vendor/maskedinput.min.js?v=3.3.41936" type="text/javascript"></script>
+<script defer src="https://cdn03.jotfor.ms/js/vendor/jquery.maskedinput.min.js?v=3.3.41936" type="text/javascript"></script>
+<script src="https://cdn01.jotfor.ms/js/vendor/imageinfo.js?v=3.3.41936" type="text/javascript"></script>
+<script src="https://cdn02.jotfor.ms/file-uploader/fileuploader.js?v=3.3.41936"></script>
+<script type="text/javascript">	JotForm.newDefaultTheme = false;
+	JotForm.extendsNewTheme = true;
+	JotForm.singleProduct = false;
+	JotForm.newPaymentUIForNewCreatedForms = false;
+	JotForm.newPaymentUI = true;
+	JotForm.submitError="jumpToFirstError";
+
+	JotForm.init(function(){
+	/*INIT-START*/
+      setTimeout(function() {
+          $('input_12').hint('ex: rahulroy1999@gmail.com');
+       }, 20);
+      JotForm.setPhoneMaskingValidator( 'input_13_full', '\u0028\u0023\u0023\u0023\u0029 \u0023\u0023\u0023\u002d\u0023\u0023\u0023\u0023' );
+
+ JotForm.calendarMonths = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+ JotForm.calendarDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+ JotForm.calendarOther = {"today":"Today"};
+ var languageOptions = document.querySelectorAll('#langList li'); 
+ for(var langIndex = 0; langIndex < languageOptions.length; langIndex++) { 
+   languageOptions[langIndex].on('click', function(e) { setTimeout(function(){ JotForm.setCalendar("44", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":false,"past":true,"custom":["1959-01-01"],"ranges":["2004-12-31>1959-01-01"],"start":"1959-01-01","end":"2004-12-31","countSelectedDaysOnly":false}); }, 0); });
+ } 
+ JotForm.onTranslationsFetch(function() { JotForm.setCalendar("44", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":false,"past":true,"custom":["1959-01-01"],"ranges":["2004-12-31>1959-01-01"],"start":"1959-01-01","end":"2004-12-31","countSelectedDaysOnly":false}); });
+      JotForm.description('input_44', 'Age limit should be 18 years to 45 years ');
+JotForm.initCaptcha('input_62');
+$('input_62_reload').observe('click',function(){ JotForm.reloadCaptcha('input_62') })
+      JotForm.alterTexts({"couponApply":"Apply","couponBlank":"Please enter a coupon.","couponChange":"","couponEnter":"Enter coupon","couponExpired":"Coupon is expired. Please try another one.","couponInvalid":"Coupon is invalid.","couponValid":"Coupon is valid.","shippingShipping":"Shipping","taxTax":"Tax","totalSubtotal":"Subtotal","totalTotal":"Total"}, true);
+      setTimeout(function() {
+          JotForm.initMultipleUploads();
+      }, 2);
+	/*INIT-END*/
+	});
+
+   JotForm.prepareCalculationsOnTheFly([null,null,null,null,null,null,null,null,null,null,{"name":"clickTo","qid":"10","text":" Indian Railways Recruitment Form ","type":"control_head"},{"description":"","name":"fullName","qid":"11","text":"Full Name (BLOCK LETTER)","type":"control_fullname"},{"description":"","name":"emailAddress","qid":"12","subLabel":"","text":"Email Address","type":"control_email"},{"description":"","name":"phoneNumber13","qid":"13","text":"Phone Number","type":"control_phone"},{"description":"","name":"category","qid":"14","subLabel":"","text":"Category","type":"control_dropdown"},null,{"description":"","name":"Address","qid":"16","text":" Address (BLOCK LETTER)","type":"control_address"},null,{"description":"","name":"religion","qid":"18","text":"Religion","type":"control_checkbox"},null,{"name":"pageBreak","qid":"20","text":"Page Break","type":"control_pagebreak"},null,null,{"name":"pageBreak23","qid":"23","text":"Page Break","type":"control_pagebreak"},null,null,null,null,null,null,null,null,null,null,null,{"description":"","name":"ifHired","qid":"35","text":"Govt Employee","type":"control_radio"},{"description":"","name":"doYou","qid":"36","text":"Ex-Serviceman","type":"control_radio"},{"description":"","name":"fathersName","qid":"37","text":"Father's Name (BLOCK LETTER)","type":"control_fullname"},null,null,null,{"description":"","name":"state","qid":"41","subLabel":"","text":"State","type":"control_dropdown"},null,null,{"description":"Age limit should be 18 years to 45 years ","name":"date","qid":"44","text":"Date of Birth","type":"control_datetime"},null,null,null,null,null,{"description":"","name":"qualification","qid":"50","subLabel":"","text":"Qualification","type":"control_dropdown"},{"description":"","name":"uploadLast","qid":"51","subLabel":"*university\u002Fboard marksheet olny","text":"Upload Last Qualification Document","type":"control_fileupload"},null,{"description":"","name":"fillOnly","qid":"53","text":"(*Fill only those qualifications prescribed for the posts applied for)(CAPITAL LETTER)","type":"control_matrix"},{"description":"","name":"signatureOf","qid":"54","subLabel":"","text":"Signature of the candidate( NOT in capital)","type":"control_signature"},{"description":"","name":"uploadPassport","qid":"55","subLabel":"","text":"Upload Passport Size Photo","type":"control_fileupload"},null,{"description":"","labelText":"","name":"image","qid":"57","text":"QR%20CODE%201.644f9a0d4e5151.24938259","type":"control_image"},null,{"name":"heading","qid":"59","text":"Examination Fees","type":"control_head"},null,{"name":"input61","qid":"61","text":"*Before Submit The Application Form Must Check The Preview And All Column Carefully, If Candidate Required To Paying The Application Fee Must Submit. If You Have Not the Required Application Fees Your Form is Not Completed. Take a Print Out of Final Submitted Form.","type":"control_text"},{"description":"","name":"pleaseVerify","qid":"62","text":"Please verify that you are human","type":"control_captcha"},{"description":"","name":"uploadLeft","qid":"63","subLabel":"","text":"Upload Left Hand Thumb Impression of the Candidate ","type":"control_fileupload"},null,null,{"description":"","name":"visibleMark","qid":"66","text":"Visible Mark of Identification on Body","type":"control_address"},{"name":"input67","qid":"67","text":"*Verify captcha after payment sucess.","type":"control_text"},{"description":"","name":"uploadPayment","qid":"68","subLabel":"after payment examination fees upload payment transaction details","text":"Upload Payment details","type":"control_fileupload"},{"name":"submit","qid":"69","text":"Submit","type":"control_button"}]);
+   setTimeout(function() {
+JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,null,{"name":"clickTo","qid":"10","text":" Indian Railways Recruitment Form ","type":"control_head"},{"description":"","name":"fullName","qid":"11","text":"Full Name (BLOCK LETTER)","type":"control_fullname"},{"description":"","name":"emailAddress","qid":"12","subLabel":"","text":"Email Address","type":"control_email"},{"description":"","name":"phoneNumber13","qid":"13","text":"Phone Number","type":"control_phone"},{"description":"","name":"category","qid":"14","subLabel":"","text":"Category","type":"control_dropdown"},null,{"description":"","name":"Address","qid":"16","text":" Address (BLOCK LETTER)","type":"control_address"},null,{"description":"","name":"religion","qid":"18","text":"Religion","type":"control_checkbox"},null,{"name":"pageBreak","qid":"20","text":"Page Break","type":"control_pagebreak"},null,null,{"name":"pageBreak23","qid":"23","text":"Page Break","type":"control_pagebreak"},null,null,null,null,null,null,null,null,null,null,null,{"description":"","name":"ifHired","qid":"35","text":"Govt Employee","type":"control_radio"},{"description":"","name":"doYou","qid":"36","text":"Ex-Serviceman","type":"control_radio"},{"description":"","name":"fathersName","qid":"37","text":"Father's Name (BLOCK LETTER)","type":"control_fullname"},null,null,null,{"description":"","name":"state","qid":"41","subLabel":"","text":"State","type":"control_dropdown"},null,null,{"description":"Age limit should be 18 years to 45 years ","name":"date","qid":"44","text":"Date of Birth","type":"control_datetime"},null,null,null,null,null,{"description":"","name":"qualification","qid":"50","subLabel":"","text":"Qualification","type":"control_dropdown"},{"description":"","name":"uploadLast","qid":"51","subLabel":"*university\u002Fboard marksheet olny","text":"Upload Last Qualification Document","type":"control_fileupload"},null,{"description":"","name":"fillOnly","qid":"53","text":"(*Fill only those qualifications prescribed for the posts applied for)(CAPITAL LETTER)","type":"control_matrix"},{"description":"","name":"signatureOf","qid":"54","subLabel":"","text":"Signature of the candidate( NOT in capital)","type":"control_signature"},{"description":"","name":"uploadPassport","qid":"55","subLabel":"","text":"Upload Passport Size Photo","type":"control_fileupload"},null,{"description":"","labelText":"","name":"image","qid":"57","text":"QR%20CODE%201.644f9a0d4e5151.24938259","type":"control_image"},null,{"name":"heading","qid":"59","text":"Examination Fees","type":"control_head"},null,{"name":"input61","qid":"61","text":"*Before Submit The Application Form Must Check The Preview And All Column Carefully, If Candidate Required To Paying The Application Fee Must Submit. If You Have Not the Required Application Fees Your Form is Not Completed. Take a Print Out of Final Submitted Form.","type":"control_text"},{"description":"","name":"pleaseVerify","qid":"62","text":"Please verify that you are human","type":"control_captcha"},{"description":"","name":"uploadLeft","qid":"63","subLabel":"","text":"Upload Left Hand Thumb Impression of the Candidate ","type":"control_fileupload"},null,null,{"description":"","name":"visibleMark","qid":"66","text":"Visible Mark of Identification on Body","type":"control_address"},{"name":"input67","qid":"67","text":"*Verify captcha after payment sucess.","type":"control_text"},{"description":"","name":"uploadPayment","qid":"68","subLabel":"after payment examination fees upload payment transaction details","text":"Upload Payment details","type":"control_fileupload"},{"name":"submit","qid":"69","text":"Submit","type":"control_button"}]);}, 20); 
+</script>
+<style type="text/css">@media print{.form-section{display:inline!important}.form-pagebreak{display:none!important}.form-section-closed{height:auto!important}.page-section{position:initial!important}}</style>
+<link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/themes/CSS/defaultV2.css?v=5fa5db2
+"/>
+<link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/themes/CSS/6449120f39376607cd13b262.css?v=3.3.41936&themeRevisionID=6449121e66313307fb4ea088"/>
+<link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/css/styles/payment/payment_styles.css?3.3.41936" />
+<link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/css/styles/payment/payment_feature.css?3.3.41936" />
+<style type="text/css" id="form-designer-style">
+    /* Injected CSS Code */
+/*PREFERENCES STYLE*/
+    .form-all {
+      font-family: Inter, sans-serif;
+    }
+  
+    .form-label.form-label-auto {
+      
+    display: block;
+    float: none;
+    text-align: left;
+    width: 100%;
+  
+    }
+  
+    .form-line {
+      margin-top: 12px;
+      margin-bottom: 12px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  
+    .form-all {
+      max-width: 752px;
+      width: 100%;
+    }
+  
+    .form-label.form-label-left,
+    .form-label.form-label-right,
+    .form-label.form-label-left.form-label-auto,
+    .form-label.form-label-right.form-label-auto {
+      width: 230px;
+    }
+  
+    .form-all {
+      font-size: 16px
+    }
+  
+    .supernova .form-all, .form-all {
+      background-color: #FFDF79;
+    }
+  
+    .form-all {
+      color: #6A1B00;
+    }
+    .form-header-group .form-header {
+      color: #6A1B00;
+    }
+    .form-header-group .form-subHeader {
+      color: #6A1B00;
+    }
+    .form-label-top,
+    .form-label-left,
+    .form-label-right,
+    .form-html,
+    .form-checkbox-item label,
+    .form-radio-item label,
+    span.FITB .qb-checkbox-label,
+    span.FITB .qb-radiobox-label,
+    span.FITB .form-radio label,
+    span.FITB .form-checkbox label,
+    [data-blotid][data-type=checkbox] [data-labelid],
+    [data-blotid][data-type=radiobox] [data-labelid],
+    span.FITB-inptCont[data-type=checkbox] label,
+    span.FITB-inptCont[data-type=radiobox] label {
+      color: #6A1B00;
+    }
+    .form-sub-label {
+      color: #84351a;
+    }
+  
+  .supernova {
+    background-color: #daccc7;
+  }
+  .supernova body {
+    background: transparent;
+  }
+  
+    .form-textbox,
+    .form-textarea,
+    .form-dropdown,
+    .form-radio-other-input,
+    .form-checkbox-other-input,
+    .form-captcha input,
+    .form-spinner input {
+      background-color: #FFFFFF;
+    }
+  
+    .supernova {
+      background-image: none;
+    }
+    #stage {
+      background-image: none;
+    }
+  
+    .form-all {
+      background-image: none;
+    }
+  
+    .form-all {
+      position: relative;
+    }
+    .form-all:before {
+      content: "";
+      background-image: url("https://www.jotform.com/uploads/guest_bc1ef64673b58352/form_files/Indian_Railway_Logo_1.644fa62a015526.73534632.png");
+      display: inline-block;
+      height: 110px;
+      position: absolute;
+      background-size: 110px 110px;
+      background-repeat: no-repeat;
+      width: 100%;
+    }
+    .form-all {
+      margin-top: 130px;
+    }
+    .form-all:before {
+      top: -120px;
+      background-position: top center;
+      left: 0;
+    }
+          /*PREFERENCES STYLE*//*__INSPECT_SEPERATOR__*/
+    /* Injected CSS Code */
+</style>
+
+<form class="jotform-form" action="https://submit.jotform.com/submit/231373701543450" method="post" enctype="multipart/form-data" name="form_231373701543450" id="231373701543450" accept-charset="utf-8" autocomplete="on"><input type="hidden" name="formID" value="231373701543450" /><input type="hidden" id="JWTContainer" value="" /><input type="hidden" id="cardinalOrderNumber" value="" />
+  <div role="main" class="form-all">
+    <ul class="form-section page-section">
+      <li id="cid_10" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-large">
+          <div class="header-text httal htvam">
+            <h1 id="header_10" class="form-header" data-component="header"> Indian Railways Recruitment Form </h1>
+            <div id="subHeader_10" class="form-subHeader">except signatures and in places indicated where it should NOT be in Capital Letters.</div>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_fullname" id="id_11"><label class="form-label form-label-top form-label-extended form-label-auto" id="label_11" for="first_11"> Full Name (BLOCK LETTER) </label>
+        <div id="cid_11" class="form-input-wide" data-layout="full">
+          <div data-wrapper-react="true" class="extended"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="first"><input type="text" id="first_11" name="q11_fullName[first]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_11 given-name" size="10" value="" data-component="first" aria-labelledby="label_11 sublabel_11_first" /><label class="form-sub-label" for="first_11" id="sublabel_11_first" style="min-height:13px" aria-hidden="false">First Name</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="middle"><input type="text" id="middle_11" name="q11_fullName[middle]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_11 additional-name" size="10" value="" data-component="middle" aria-labelledby="label_11 sublabel_11_middle" /><label class="form-sub-label" for="middle_11" id="sublabel_11_middle" style="min-height:13px" aria-hidden="false">Middle Name</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="last"><input type="text" id="last_11" name="q11_fullName[last]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_11 family-name" size="15" value="" data-component="last" aria-labelledby="label_11 sublabel_11_last" /><label class="form-sub-label" for="last_11" id="sublabel_11_last" style="min-height:13px" aria-hidden="false">Last Name</label></span></div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_fullname" id="id_37"><label class="form-label form-label-top form-label-extended form-label-auto" id="label_37" for="first_37"> Father's Name (BLOCK LETTER) </label>
+        <div id="cid_37" class="form-input-wide" data-layout="full">
+          <div data-wrapper-react="true" class="extended"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="first"><input type="text" id="first_37" name="q37_fathersName[first]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_37 given-name" size="10" value="" data-component="first" aria-labelledby="label_37 sublabel_37_first" /><label class="form-sub-label" for="first_37" id="sublabel_37_first" style="min-height:13px" aria-hidden="false">First Name</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="middle"><input type="text" id="middle_37" name="q37_fathersName[middle]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_37 additional-name" size="10" value="" data-component="middle" aria-labelledby="label_37 sublabel_37_middle" /><label class="form-sub-label" for="middle_37" id="sublabel_37_middle" style="min-height:13px" aria-hidden="false">Middle Name</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="last"><input type="text" id="last_37" name="q37_fathersName[last]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_37 family-name" size="15" value="" data-component="last" aria-labelledby="label_37 sublabel_37_last" /><label class="form-sub-label" for="last_37" id="sublabel_37_last" style="min-height:13px" aria-hidden="false">Last Name</label></span></div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_address" id="id_16" data-compound-hint=",,,,,,,"><label class="form-label form-label-top form-label-auto" id="label_16" for="input_16_addr_line1"> Address (BLOCK LETTER) </label>
+        <div id="cid_16" class="form-input-wide" data-layout="full">
+          <div summary="" class="form-address-table jsTest-addressField">
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_16_addr_line1" name="q16_Address[addr_line1]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_16 address-line1" value="" data-component="address_line_1" aria-labelledby="label_16 sublabel_16_addr_line1" required="" /><label class="form-sub-label" for="input_16_addr_line1" id="sublabel_16_addr_line1" style="min-height:13px" aria-hidden="false">Street Address</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField" style="display:none"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_16_addr_line2" name="q16_Address[addr_line2]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_16 off" value="" data-component="address_line_2" aria-labelledby="label_16 sublabel_16_addr_line2" /><label class="form-sub-label" for="input_16_addr_line2" id="sublabel_16_addr_line2" style="min-height:13px" aria-hidden="false">Street Address Line 2</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-city-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_16_city" name="q16_Address[city]" class="form-textbox form-address-city" data-defaultvalue="" autoComplete="section-input_16 address-level2" value="" data-component="city" aria-labelledby="label_16 sublabel_16_city" required="" /><label class="form-sub-label" for="input_16_city" id="sublabel_16_city" style="min-height:13px" aria-hidden="false">City</label></span></span><span class="form-address-line form-address-state-line jsTest-address-lineField form-address-hiddenLine" style="display:none"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_16_state" name="q16_Address[state]" class="form-textbox form-address-state" data-defaultvalue="" autoComplete="section-input_16 address-level1" value="" data-component="state" aria-labelledby="label_16 sublabel_16_state" /><label class="form-sub-label" for="input_16_state" id="sublabel_16_state" style="min-height:13px" aria-hidden="false">State / Province</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-zip-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_16_postal" name="q16_Address[postal]" class="form-textbox form-address-postal" data-defaultvalue="" autoComplete="section-input_16 postal-code" value="" data-component="zip" aria-labelledby="label_16 sublabel_16_postal" required="" /><label class="form-sub-label" for="input_16_postal" id="sublabel_16_postal" style="min-height:13px" aria-hidden="false">Postal / Zip Code</label></span></span></div>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_dropdown" id="id_41"><label class="form-label form-label-top form-label-auto" id="label_41" for="input_41"> State </label>
+        <div id="cid_41" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="input_41" name="q41_state" style="width:310px" data-component="dropdown" aria-label="State">
+            <option value="">Please Select</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+            <option value="Assam">Assam</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Chhattisgarh">Chhattisgarh</option>
+            <option value="Goa">Goa</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Himachal Pradesh">Himachal Pradesh</option>
+            <option value="Jharkhand">Jharkhand</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Manipur">Manipur</option>
+            <option value="Meghalaya">Meghalaya</option>
+            <option value="Mizoram">Mizoram</option>
+            <option value="Nagaland">Nagaland</option>
+            <option value="Odisha">Odisha</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Sikkim">Sikkim</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Tripura">Tripura</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="Uttarakhand">Uttarakhand</option>
+            <option value="West Bengal">West Bengal</option>
+          </select> </div>
+      </li>
+      <li class="form-line" data-type="control_email" id="id_12"><label class="form-label form-label-top form-label-auto" id="label_12" for="input_12"> Email Address </label>
+        <div id="cid_12" class="form-input-wide" data-layout="half"> <input type="email" id="input_12" name="q12_emailAddress" class="form-textbox validate[Email]" data-defaultvalue="" style="width:310px" size="310" value="" placeholder="ex: rahulroy1999@gmail.com" data-component="email" aria-labelledby="label_12" /> </div>
+      </li>
+      <li class="form-line" data-type="control_phone" id="id_13"><label class="form-label form-label-top form-label-auto" id="label_13" for="input_13_full"> Phone Number </label>
+        <div id="cid_13" class="form-input-wide" data-layout="half"> <span class="form-sub-label-container" style="vertical-align:top"><input type="tel" id="input_13_full" name="q13_phoneNumber13[full]" data-type="mask-number" class="mask-phone-number form-textbox validate[Fill Mask]" data-defaultvalue="" autoComplete="section-input_13 tel-national" style="width:310px" data-masked="true" value="" placeholder="(000) 000-0000" data-component="phone" aria-labelledby="label_13" /></span> </div>
+      </li>
+      <li class="form-line" data-type="control_datetime" id="id_44"><label class="form-label form-label-top form-label-auto" id="label_44" for="lite_mode_44"> Date of Birth </label>
+        <div id="cid_44" class="form-input-wide" data-layout="half">
+          <div data-wrapper-react="true">
+            <div style="display:none"><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox validate[limitDate]" id="day_44" name="q44_date[day]" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="off" aria-labelledby="label_44 sublabel_44_day" /><span class="date-separate" aria-hidden="true"> /</span><label class="form-sub-label" for="day_44" id="sublabel_44_day" style="min-height:13px" aria-hidden="false">Day</label></span><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox validate[limitDate]" id="month_44" name="q44_date[month]" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="off" aria-labelledby="label_44 sublabel_44_month" /><span class="date-separate" aria-hidden="true"> /</span><label class="form-sub-label" for="month_44" id="sublabel_44_month" style="min-height:13px" aria-hidden="false">Month</label></span><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox validate[limitDate]" id="year_44" name="q44_date[year]" size="4" data-maxlength="4" data-age="" maxLength="4" value="" autoComplete="off" aria-labelledby="label_44 sublabel_44_year" /><label class="form-sub-label" for="year_44" id="sublabel_44_year" style="min-height:13px" aria-hidden="false">Year</label></span></div><span class="form-sub-label-container" style="vertical-align:top"><input type="text" class="form-textbox validate[limitDate, validateLiteDate]" id="lite_mode_44" size="12" data-maxlength="12" maxLength="12" data-age="" value="" data-format="ddmmyyyy" data-seperator="/" placeholder="DD/MM/YYYY" autoComplete="off" aria-labelledby="label_44" /><img class=" newDefaultTheme-dateIcon icon-liteMode" alt="Pick a Date" id="input_44_pick" src="https://cdn.jotfor.ms/images/calendar.png" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v2" /><label class="form-sub-label is-empty" for="lite_mode_44" id="sublabel_44_litemode" style="min-height:13px" aria-hidden="false"></label></span>
+          </div>
+        </div>
+      </li>
+      <li id="cid_20" class="form-input-wide" data-type="control_pagebreak">
+        <div class="form-pagebreak" data-component="pagebreak">
+          <div class="form-pagebreak-back-container"><button id="form-pagebreak-back_20" type="button" class="form-pagebreak-back  jf-form-buttons" data-component="pagebreak-back">Back</button></div>
+          <div class="form-pagebreak-next-container"><button id="form-pagebreak-next_20" type="button" class="form-pagebreak-next  jf-form-buttons" data-component="pagebreak-next">Next</button></div>
+          <div style="clear:both" class="pageInfo form-sub-label" id="pageInfo_20"></div>
+        </div>
+      </li>
+    </ul>
+    <ul class="form-section page-section" style="display:none;">
+      <li class="form-line" data-type="control_checkbox" id="id_18"><label class="form-label form-label-top form-label-auto" id="label_18" for="input_18"> Religion </label>
+        <div id="cid_18" class="form-input-wide" data-layout="full">
+          <div class="form-single-column" role="group" aria-labelledby="label_18" data-component="checkbox"><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_18" class="form-checkbox" id="input_18_0" name="q18_religion[]" value="Hindu" /><label id="label_input_18_0" for="input_18_0">Hindu</label></span><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_18" class="form-checkbox" id="input_18_1" name="q18_religion[]" value="Muslim" /><label id="label_input_18_1" for="input_18_1">Muslim</label></span><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_18" class="form-checkbox" id="input_18_2" name="q18_religion[]" value="Christian" /><label id="label_input_18_2" for="input_18_2">Christian</label></span><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_18" class="form-checkbox" id="input_18_3" name="q18_religion[]" value="Sikh" /><label id="label_input_18_3" for="input_18_3">Sikh</label></span><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_18" class="form-checkbox" id="input_18_4" name="q18_religion[]" value="Buddhist" /><label id="label_input_18_4" for="input_18_4">Buddhist</label></span><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_18" class="form-checkbox" id="input_18_5" name="q18_religion[]" value="Jain" /><label id="label_input_18_5" for="input_18_5">Jain</label></span><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_18" class="form-checkbox" id="input_18_6" name="q18_religion[]" value="Parsi" /><label id="label_input_18_6" for="input_18_6">Parsi</label></span><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_18" class="form-checkbox" id="input_18_7" name="q18_religion[]" value="Others" /><label id="label_input_18_7" for="input_18_7">Others</label></span></div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_radio" id="id_35"><label class="form-label form-label-top form-label-auto" id="label_35" for="input_35"> Govt Employee </label>
+        <div id="cid_35" class="form-input-wide" data-layout="full">
+          <div class="form-single-column" role="group" aria-labelledby="label_35" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" aria-describedby="label_35" class="form-radio" id="input_35_0" name="q35_ifHired" value="YES" /><label id="label_input_35_0" for="input_35_0">YES</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" aria-describedby="label_35" class="form-radio" id="input_35_1" name="q35_ifHired" value="NO" /><label id="label_input_35_1" for="input_35_1">NO</label></span></div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_radio" id="id_36"><label class="form-label form-label-top form-label-auto" id="label_36" for="input_36"> Ex-Serviceman </label>
+        <div id="cid_36" class="form-input-wide" data-layout="full">
+          <div class="form-single-column" role="group" aria-labelledby="label_36" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" aria-describedby="label_36" class="form-radio" id="input_36_0" name="q36_doYou" value="YES" /><label id="label_input_36_0" for="input_36_0">YES</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" aria-describedby="label_36" class="form-radio" id="input_36_1" name="q36_doYou" value="NO" /><label id="label_input_36_1" for="input_36_1">NO</label></span></div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_dropdown" id="id_14"><label class="form-label form-label-top form-label-auto" id="label_14" for="input_14"> Category </label>
+        <div id="cid_14" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="input_14" name="q14_category" style="width:310px" data-component="dropdown" aria-label="Category">
+            <option value="">Please Select</option>
+            <option value="UR">UR</option>
+            <option value="SC">SC</option>
+            <option value="ST">ST</option>
+            <option value="OBC">OBC</option>
+            <option value="GENERAL">GENERAL</option>
+            <option value="EWS">EWS</option>
+            <option value="PH">PH</option>
+          </select> </div>
+      </li>
+      <li class="form-line" data-type="control_address" id="id_66" data-compound-hint=",,,,,,,"><label class="form-label form-label-top form-label-auto" id="label_66" for="input_66_addr_line1"> Visible Mark of Identification on Body </label>
+        <div id="cid_66" class="form-input-wide" data-layout="full">
+          <div summary="" class="form-address-table jsTest-addressField">
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_66_addr_line1" name="q66_visibleMark[addr_line1]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_66 address-line1" value="" data-component="address_line_1" aria-labelledby="label_66 sublabel_66_addr_line1" required="" /><label class="form-sub-label" for="input_66_addr_line1" id="sublabel_66_addr_line1" style="min-height:13px" aria-hidden="false">(compulsory)</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField" style="display:none"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_66_addr_line2" name="q66_visibleMark[addr_line2]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_66 off" value="" data-component="address_line_2" aria-labelledby="label_66 sublabel_66_addr_line2" /><label class="form-sub-label" for="input_66_addr_line2" id="sublabel_66_addr_line2" style="min-height:13px" aria-hidden="false">Street Address Line 2</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField" style="display:none"><span class="form-address-line form-address-city-line jsTest-address-lineField form-address-hiddenLine" style="display:none"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_66_city" name="q66_visibleMark[city]" class="form-textbox form-address-city" data-defaultvalue="" autoComplete="section-input_66 address-level2" value="" data-component="city" aria-labelledby="label_66 sublabel_66_city" /><label class="form-sub-label" for="input_66_city" id="sublabel_66_city" style="min-height:13px" aria-hidden="false">City</label></span></span><span class="form-address-line form-address-state-line jsTest-address-lineField form-address-hiddenLine" style="display:none"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_66_state" name="q66_visibleMark[state]" class="form-textbox form-address-state" data-defaultvalue="" autoComplete="section-input_66 address-level1" value="" data-component="state" aria-labelledby="label_66 sublabel_66_state" /><label class="form-sub-label" for="input_66_state" id="sublabel_66_state" style="min-height:13px" aria-hidden="false">State / Province</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField" style="display:none"><span class="form-address-line form-address-zip-line jsTest-address-lineField form-address-hiddenLine" style="display:none"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_66_postal" name="q66_visibleMark[postal]" class="form-textbox form-address-postal" data-defaultvalue="" autoComplete="section-input_66 postal-code" value="" data-component="zip" aria-labelledby="label_66 sublabel_66_postal" /><label class="form-sub-label" for="input_66_postal" id="sublabel_66_postal" style="min-height:13px" aria-hidden="false">Postal / Zip Code</label></span></span></div>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_dropdown" id="id_50"><label class="form-label form-label-top form-label-auto" id="label_50" for="input_50"> Qualification </label>
+        <div id="cid_50" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="input_50" name="q50_qualification" style="width:310px" data-component="dropdown" aria-label="Qualification">
+            <option value="">Please Select</option>
+            <option value="Higher Secondary">Higher Secondary</option>
+            <option value="Graduate">Graduate</option>
+            <option value="Under Graduate">Under Graduate</option>
+            <option value="Post Graduate">Post Graduate</option>
+            <option value="Diploma / ITI">Diploma / ITI</option>
+          </select> </div>
+      </li>
+      <li class="form-line" data-type="control_matrix" id="id_53"><label class="form-label form-label-top" id="label_53" for="input_53"> (*Fill only those qualifications prescribed for the posts applied for)(CAPITAL LETTER) </label>
+        <div id="cid_53" class="form-input-wide" data-layout="full">
+          <table summary="" aria-labelledby="label_53" cellPadding="4" cellSpacing="0" class="form-matrix-table" data-component="matrix">
+            <tr class="form-matrix-tr form-matrix-header-tr">
+              <th class="form-matrix-th" style="border:none"> </th>
+              <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_0"><label id="label_53_col_0">University/Board</label></th>
+              <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_1"><label id="label_53_col_1">Year of Passing</label></th>
+              <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_2"><label id="label_53_col_2">Subject</label></th>
+              <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_3"><label id="label_53_col_3">Percentage(%)</label></th>
+            </tr>
+            <tr class="form-matrix-tr form-matrix-value-tr" aria-labelledby="label_53 label_53_row_0">
+              <th scope="row" class="form-matrix-headers form-matrix-row-headers"><label id="label_53_row_0">Higher Secondary</label></th>
+              <td class="form-matrix-values"><input type="text" id="input_53_0_0" class="form-textbox" size="5" name="q53_fillOnly[0][]" style="width:100%;box-sizing:border-box" value="" aria-labelledby="label_53_col_0 label_53_row_0" aria-label="Cells Text Box" /></td>
+              <td class="form-matrix-values"><input type="text" id="input_53_0_1" class="form-textbox" size="5" name="q53_fillOnly[0][]" style="width:100%;box-sizing:border-box" value="" aria-labelledby="label_53_col_1 label_53_row_0" aria-label="Cells Text Box" /></td>
+              <td class="form-matrix-values"><input type="text" id="input_53_0_2" class="form-textbox" size="5" name="q53_fillOnly[0][]" style="width:100%;box-sizing:border-box" value="" aria-labelledby="label_53_col_2 label_53_row_0" aria-label="Cells Text Box" /></td>
+              <td class="form-matrix-values"><input type="text" id="input_53_0_3" class="form-textbox" size="5" name="q53_fillOnly[0][]" style="width:100%;box-sizing:border-box" value="" aria-labelledby="label_53_col_3 label_53_row_0" aria-label="Cells Text Box" /></td>
+            </tr>
+            <tr class="form-matrix-tr form-matrix-value-tr" aria-labelledby="label_53 label_53_row_1">
+              <th scope="row" class="form-matrix-headers form-matrix-row-headers"><label id="label_53_row_1">Graduate</label></th>
+              <td class="form-matrix-values"><input type="text" id="input_53_1_0" class="form-textbox" size="5" name="q53_fillOnly[1][]" style="width:100%;box-sizing:border-box" value="" aria-labelledby="label_53_col_0 label_53_row_1" aria-label="Cells Text Box" /></td>
+              <td class="form-matrix-values"><input type="text" id="input_53_1_1" class="form-textbox" size="5" name="q53_fillOnly[1][]" style="width:100%;box-sizing:border-box" value="" aria-labelledby="label_53_col_1 label_53_row_1" aria-label="Cells Text Box" /></td>
+              <td class="form-matrix-values"><input type="text" id="input_53_1_2" class="form-textbox" size="5" name="q53_fillOnly[1][]" style="width:100%;box-sizing:border-box" value="" aria-labelledby="label_53_col_2 label_53_row_1" aria-label="Cells Text Box" /></td>
+              <td class="form-matrix-values"><input type="text" id="input_53_1_3" class="form-textbox" size="5" name="q53_fillOnly[1][]" style="width:100%;box-sizing:border-box" value="" aria-labelledby="label_53_col_3 label_53_row_1" aria-label="Cells Text Box" /></td>
+            </tr>
+            <tr class="form-matrix-tr form-matrix-value-tr" aria-labelledby="label_53 label_53_row_2">
+              <th scope="row" class="form-matrix-headers form-matrix-row-headers"><label id="label_53_row_2">Under Graduate</label></th>
+              <td class="form-matrix-values"><input type="text" id="input_53_2_0" class="form-textbox" size="5" name="q53_fillOnly[2][]" style="width:100%;box-sizing:border-box" value="" aria-labelledby="label_53_col_0 label_53_row_2" aria-label="Cells Text Box" /></td>
+              <td class="form-matrix-values"><input type="text" id="input_53_2_1" class="form-textbox" size="5" name="q53_fillOnly[2][]" style="width:100%;box-sizing:border-box" value="" aria-labelledby="label_53_col_1 label_53_row_2" aria-label="Cells Text Box" /></td>
+              <td class="form-matrix-values"><input type="text" id="input_53_2_2" class="form-textbox" size="5" name="q53_fillOnly[2][]" style="width:100%;box-sizing:border-box" value="" aria-labelledby="label_53_col_2 label_53_row_2" aria-label="Cells Text Box" /></td>
+              <td class="form-matrix-values"><input type="text" id="input_53_2_3" class="form-textbox" size="5" name="q53_fillOnly[2][]" style="width:100%;box-sizing:border-box" value="" aria-labelledby="label_53_col_3 label_53_row_2" aria-label="Cells Text Box" /></td>
+            </tr>
+            <tr class="form-matrix-tr form-matrix-value-tr" aria-labelledby="label_53 label_53_row_3">
+              <th scope="row" class="form-matrix-headers form-matrix-row-headers"><label id="label_53_row_3">Post Graduate<br /></label></th>
+              <td class="form-matrix-values"><input type="text" id="input_53_3_0" class="form-textbox" size="5" name="q53_fillOnly[3][]" style="width:100%;box-sizing:border-box" value="" aria-labelledby="label_53_col_0 label_53_row_3" aria-label="Cells Text Box" /></td>
+              <td class="form-matrix-values"><input type="text" id="input_53_3_1" class="form-textbox" size="5" name="q53_fillOnly[3][]" style="width:100%;box-sizing:border-box" value="" aria-labelledby="label_53_col_1 label_53_row_3" aria-label="Cells Text Box" /></td>
+              <td class="form-matrix-values"><input type="text" id="input_53_3_2" class="form-textbox" size="5" name="q53_fillOnly[3][]" style="width:100%;box-sizing:border-box" value="" aria-labelledby="label_53_col_2 label_53_row_3" aria-label="Cells Text Box" /></td>
+              <td class="form-matrix-values"><input type="text" id="input_53_3_3" class="form-textbox" size="5" name="q53_fillOnly[3][]" style="width:100%;box-sizing:border-box" value="" aria-labelledby="label_53_col_3 label_53_row_3" aria-label="Cells Text Box" /></td>
+            </tr>
+            <tr class="form-matrix-tr form-matrix-value-tr" aria-labelledby="label_53 label_53_row_4">
+              <th scope="row" class="form-matrix-headers form-matrix-row-headers"><label id="label_53_row_4">Diploma / ITI</label></th>
+              <td class="form-matrix-values"><input type="text" id="input_53_4_0" class="form-textbox" size="5" name="q53_fillOnly[4][]" style="width:100%;box-sizing:border-box" value="" aria-labelledby="label_53_col_0 label_53_row_4" aria-label="Cells Text Box" /></td>
+              <td class="form-matrix-values"><input type="text" id="input_53_4_1" class="form-textbox" size="5" name="q53_fillOnly[4][]" style="width:100%;box-sizing:border-box" value="" aria-labelledby="label_53_col_1 label_53_row_4" aria-label="Cells Text Box" /></td>
+              <td class="form-matrix-values"><input type="text" id="input_53_4_2" class="form-textbox" size="5" name="q53_fillOnly[4][]" style="width:100%;box-sizing:border-box" value="" aria-labelledby="label_53_col_2 label_53_row_4" aria-label="Cells Text Box" /></td>
+              <td class="form-matrix-values"><input type="text" id="input_53_4_3" class="form-textbox" size="5" name="q53_fillOnly[4][]" style="width:100%;box-sizing:border-box" value="" aria-labelledby="label_53_col_3 label_53_row_4" aria-label="Cells Text Box" /></td>
+            </tr>
+          </table>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_fileupload" id="id_51"><label class="form-label form-label-top form-label-auto" id="label_51" for="input_51"> Upload Last Qualification Document </label>
+        <div id="cid_51" class="form-input-wide" data-layout="full">
+          <div class="jfQuestion-fields" data-wrapper-react="true">
+            <div class="jfField isFilled">
+              <div class="jfUpload-wrapper">
+                <div class="jfUpload-container">
+                  <div class="jfUpload-button-container">
+                    <div class="jfUpload-button" aria-hidden="true" tabindex="0" style="display:none" data-version="v2">Browse Files<div class="jfUpload-heading forDesktop">Drag and drop files here</div>
+                      <div class="jfUpload-heading forMobile">Choose a file</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="jfUpload-files-container">
+                  <div class="validate[multipleUpload]"><input type="file" id="input_51" name="q51_uploadLast[]" multiple="" class="form-upload-multiple" data-imagevalidate="yes" data-file-accept="pdf, doc, jpg, jpeg" data-file-maxsize="2048" data-file-minsize="1" data-file-limit="" data-component="fileupload" aria-label="Browse Files" /></div>
+                </div>
+              </div><span class="form-sub-label-container" style="vertical-align:top"><label class="form-sub-label" for="input_51" id="sublabel_input_51" style="min-height:13px" aria-hidden="false">*university/board marksheet olny</label></span>
+            </div><span style="display:none" class="cancelText">Cancel</span><span style="display:none" class="ofText">of</span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_fileupload" id="id_55"><label class="form-label form-label-top form-label-auto" id="label_55" for="input_55"> Upload Passport Size Photo </label>
+        <div id="cid_55" class="form-input-wide" data-layout="full">
+          <div class="jfQuestion-fields" data-wrapper-react="true">
+            <div class="jfField isFilled">
+              <div class="jfUpload-wrapper">
+                <div class="jfUpload-container">
+                  <div class="jfUpload-button-container">
+                    <div class="jfUpload-button" aria-hidden="true" tabindex="0" style="display:none" data-version="v2">Browse Files<div class="jfUpload-heading forDesktop">Drag and drop files here</div>
+                      <div class="jfUpload-heading forMobile">Choose a file</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="jfUpload-files-container">
+                  <div class="validate[multipleUpload]"><input type="file" id="input_55" name="q55_uploadPassport[]" multiple="" class="form-upload-multiple" data-imagevalidate="yes" data-file-accept="pdf, doc, docx, xls, xlsx, csv, txt, rtf, html, zip, mp3, wma, mpg, flv, avi, jpg, jpeg, png, gif" data-file-maxsize="10854" data-file-minsize="0" data-file-limit="" data-component="fileupload" aria-label="Browse Files" /></div>
+                </div>
+              </div>
+              <div data-wrapper-react="true"></div>
+            </div><span style="display:none" class="cancelText">Cancel</span><span style="display:none" class="ofText">of</span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_signature" id="id_54"><label class="form-label form-label-top form-label-auto" id="label_54" for="input_54"> Signature of the candidate( NOT in capital) </label>
+        <div id="cid_54" class="form-input-wide" data-layout="half">
+          <div data-wrapper-react="true">
+            <div id="signature_pad_54" class="signature-pad-wrapper" style="width:312px;height:116px">
+              <div data-wrapper-react="true">
+                <!--[if IE 7]><script type="text/javascript" src="/js/vendor/json2.js"></script><![endif]-->
+              </div>
+              <div class="signature-line signature-wrapper signature-placeholder" data-component="signature" style="width:312px;height:116px">
+                <div id="sig_pad_54" data-width="310" data-height="114" data-id="54" data-required="false" class="pad " aria-labelledby="label_54"></div><input type="hidden" name="q54_signatureOf" class="output4" id="input_54" />
+              </div> <span class="clear-pad-btn clear-pad" role="button" tabindex="0">Clear</span>
+            </div>
+            <div data-wrapper-react="true">
+              <script type="text/javascript">
+                window.signatureForm = true
+              </script>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_fileupload" id="id_63"><label class="form-label form-label-top form-label-auto" id="label_63" for="input_63"> Upload Left Hand Thumb Impression of the Candidate </label>
+        <div id="cid_63" class="form-input-wide" data-layout="full">
+          <div class="jfQuestion-fields" data-wrapper-react="true">
+            <div class="jfField isFilled">
+              <div class="jfUpload-wrapper">
+                <div class="jfUpload-container">
+                  <div class="jfUpload-button-container">
+                    <div class="jfUpload-button" aria-hidden="true" tabindex="0" style="display:none" data-version="v2">Browse Files<div class="jfUpload-heading forDesktop">Drag and drop files here</div>
+                      <div class="jfUpload-heading forMobile">Choose a file</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="jfUpload-files-container">
+                  <div class="validate[multipleUpload]"><input type="file" id="input_63" name="q63_uploadLeft[]" multiple="" class="form-upload-multiple" data-imagevalidate="yes" data-file-accept="pdf, doc, docx, xls, xlsx, csv, txt, rtf, html, zip, mp3, wma, mpg, flv, avi, jpg, jpeg, png, gif" data-file-maxsize="10854" data-file-minsize="0" data-file-limit="" data-component="fileupload" aria-label="Browse Files" /></div>
+                </div>
+              </div>
+              <div data-wrapper-react="true"></div>
+            </div><span style="display:none" class="cancelText">Cancel</span><span style="display:none" class="ofText">of</span>
+          </div>
+        </div>
+      </li>
+      <li id="cid_23" class="form-input-wide" data-type="control_pagebreak">
+        <div class="form-pagebreak" data-component="pagebreak">
+          <div class="form-pagebreak-back-container"><button id="form-pagebreak-back_23" type="button" class="form-pagebreak-back  jf-form-buttons" data-component="pagebreak-back">Back</button></div>
+          <div class="form-pagebreak-next-container"><button id="form-pagebreak-next_23" type="button" class="form-pagebreak-next  jf-form-buttons" data-component="pagebreak-next">Next</button></div>
+          <div style="clear:both" class="pageInfo form-sub-label" id="pageInfo_23"></div>
+        </div>
+      </li>
+    </ul>
+    <ul class="form-section page-section" style="display:none;">
+      <li id="cid_59" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-default">
+          <div class="header-text httal htvam">
+            <h2 id="header_59" class="form-header" data-component="header">Examination Fees</h2>
+            <div id="subHeader_59" class="form-subHeader">SEVEN HUNDRED FIFTY RUPESS ONLY (750/-) Pay The Examination Fee Through This QR Code</div>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_image" id="id_57">
+        <div id="cid_57" class="form-input-wide" data-layout="full">
+          <div style="text-align: center"><b>PAY THROUGH IMPS</b></div>
+          <br>
+          <div style="text-align:center">A/C HOLDER NAME- INDIAN RAILWAY RECRUITMENT BOARD 
+                                         <br>
+                                         A/C NO- 2223330066558596
+                                         <br>
+                                         IFSC- RATN0VAAPIS
+                                         <br>
+                                         BANK NAME- RBL BANK
+         </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_text" id="id_61">
+        <div id="cid_61" class="form-input-wide" data-layout="full">
+          <div id="text_61" class="form-html" data-component="text" tabindex="0">
+            <p>*Before Submit The Application Form Must Check The Preview And All Column Carefully, If Candidate Required To Paying The Application Fee Must Submit. If You Have Not the Required Application Fees Your Form is Not Completed. Take a Print Out of Final Submitted Form.</p>
+          </div>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_fileupload" id="id_68"><label class="form-label form-label-top form-label-auto" id="label_68" for="input_68"> Upload Payment details<span class="form-required">*</span> </label>
+        <div id="cid_68" class="form-input-wide jf-required" data-layout="full">
+          <div class="jfQuestion-fields" data-wrapper-react="true">
+            <div class="jfField isFilled">
+              <div class="jfUpload-wrapper">
+                <div class="jfUpload-container">
+                  <div class="jfUpload-button-container">
+                    <div class="jfUpload-button" aria-hidden="true" tabindex="0" style="display:none" data-version="v2">Browse Files<div class="jfUpload-heading forDesktop">Drag and drop files here</div>
+                      <div class="jfUpload-heading forMobile">Choose a file</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="jfUpload-files-container">
+                  <div class="validate[multipleUpload]"><input type="file" id="input_68" name="q68_uploadPayment[]" multiple="" class="form-upload-multiple validate[required]" data-imagevalidate="yes" data-file-accept="pdf, doc, docx, xls, xlsx, csv, txt, rtf, html, zip, mp3, wma, mpg, flv, avi, jpg, jpeg, png, gif" data-file-maxsize="10854" data-file-minsize="0" data-file-limit="" data-component="fileupload" required="" aria-label="Browse Files" /></div>
+                </div>
+              </div><span class="form-sub-label-container" style="vertical-align:top"><label class="form-sub-label" for="input_68" id="sublabel_input_68" style="min-height:13px" aria-hidden="false">after payment examination fees upload payment transaction details</label></span>
+            </div><span style="display:none" class="cancelText">Cancel</span><span style="display:none" class="ofText">of</span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_captcha" id="id_62"><label class="form-label form-label-top form-label-auto" id="label_62" for="input_62"> Please verify that you are human<span class="form-required">*</span> </label>
+        <div id="cid_62" class="form-input-wide jf-required" data-layout="full">
+          <div class="form-captcha" data-component="captcha"><label for="input_62"><img alt="Captcha - Reload if not displayed" id="input_62_captcha" class="form-captcha-image" style="background:url(https://cdn.jotfor.ms/images/loader-big.gif) no-repeat center" src="https://cdn.jotfor.ms/images/blank.gif" width="150" height="41" /></label>
+            <div style="white-space:nowrap"><input type="text" id="input_62" class="form-textbox validate[required]" name="captcha" style="width:130px" required="" /><img src="https://cdn.jotfor.ms/images/reload.png" alt="Reload" style="cursor:pointer;vertical-align:middle" id="input_62_reload" /><input type="hidden" name="captcha_id" id="input_62_captcha_id" value="0" /></div>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_text" id="id_67">
+        <div id="cid_67" class="form-input-wide" data-layout="full">
+          <div id="text_67" class="form-html" data-component="text" tabindex="0">
+            <p>*Verify captcha after payment sucess.</p>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_button" id="id_69">
+        <div id="cid_69" class="form-input-wide" data-layout="full">
+          <div data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField"><button id="input_69" type="submit" class="form-submit-button form-submit-button-red-500 submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">Submit</button></div>
+        </div>
+      </li>
+      <li style="display:none">Should be Empty: <input type="text" name="website" value="" /></li>
+    </ul>
+  </div>
+  
